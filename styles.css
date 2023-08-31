@@ -1,0 +1,350 @@
+/* styles.css */
+/* Set body and html height to 100% and remove margin and padding */
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f4f4;
+}
+
+/* Your previous styles here */
+
+/* Styles for header content to stretch full screen */
+.header-content {
+    display: grid;
+    grid-template-columns: 50% 50%;
+    align-items: center;
+    height: 100%;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+/* Styles for image and text container */
+
+
+/* Styles for circular image */
+.circle img {
+    border-radius: 50%;
+    width: 60%;
+    object-fit: cover;
+}
+.text{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* Styles for animated text */
+.animated-text {
+    animation: fadeInMove 3s forwards;
+    margin-right: 2em;
+    width: 100%;
+}
+
+/* Keyframes for fade-in animation */
+@keyframes fadeInMove {
+    0% {
+        opacity: 0;
+        transform: translateX(-100px); /* Bewegt den Text 100px nach links vom Startpunkt */
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0); /* Bewegt den Text zurück zur Startposition */
+    }
+}
+
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em;
+    background-color: #333;
+    color: #fff;
+}
+
+.nav-links {
+    list-style: none;
+}
+
+.nav-links li {
+    display: inline;
+    margin-left: 1em;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.header-content {
+    padding: 2em;
+    text-align: center;
+    background-color: #f4f4f4;
+}
+
+section {
+    padding: 2em;
+    margin-bottom: 2em;
+}
+button{
+    display: none;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .header{
+        height: 100%;
+    }
+    .header-content {
+        grid-template-columns: 1fr;
+        
+        background-size: cover;
+        background-position: center;
+    }
+    .animated-text {
+        width: 100%;
+    }
+    .circle {
+        display: none;
+    }
+    .logo{
+        display: none;
+    }
+}
+
+
+    
+
+/* Projekte */
+body h1{
+    text-align: center;
+}
+.projekte {
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+h1.projektetext{
+    margin: 0 auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.containerProjekte {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width: 40%;
+    height: 25%;
+    margin: 0 auto;
+}
+
+.mobile-bg {
+    display: none;
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: 0;
+    object-fit: cover;
+}
+
+
+.row {
+    display: contents;
+}
+
+.column, .memory, .wuerfelpoker {
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+}
+
+.video-background video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+    transition: transform 0.5s ease-in-out;
+    z-index: 0;
+}
+
+.wuerfelpoker:hover video {
+    transform: translate(-50%, -50%) scale(0.3);
+    object-fit: contain;
+}
+
+.column:hover video{
+    transform: translate(-50%, -50%) scale(0.2);
+    object-fit: contain;
+}
+
+.column:hover video{
+    transform: translate(-50%, -50%) scale(0.2);
+    object-fit: contain;
+}
+
+.content {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    background-color: rgba(128, 128, 128, 0.8);
+    z-index: 2;
+    font-size: 2vh;
+}
+.content h1{
+    color: black;
+}
+
+.column, .memory, .wuerfelpoker {
+    position: relative;
+    padding-top: 100%;
+    overflow: hidden;
+}
+
+@media screen and (max-width: 768px) {
+    .video-background video {
+        display: none;
+    }
+    .memory{
+        background-image: url("memory.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    .snake{
+        background-image: url("snake.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    .wuerfelpoker{
+        background-image: url("wuerfelpoker.jpg");
+        background-size: cover;
+        background-position: center;
+    }
+    
+    h1.projektetext{
+        font-size: 1.5em;
+    }
+
+    .containerProjekte {
+        grid-template-columns: 1fr;
+        width: 80%;
+        padding: 20px 0;
+    }
+
+    .content {
+        padding: 10%;
+    }
+    
+    .nav-links {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav-links li {
+        margin-bottom: 10px;
+    }
+
+}
+
+
+/*kontakt.html*/
+
+.kontaktseite{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.kontakt-formular {
+    width: 50%;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.kontakt-formular h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 95%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.form-group button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    border-radius: 5px;
+}
+
+.form-group button:hover {
+    background-color: #0056b3;
+}
+
+
+@media (max-width: 600px) {
+    .kontakt-formular {
+        width: 90%;
+    }
+}
+
+
+/* Angebot */
+.angebote{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    height: 100vh;
+}
+
+.angebot{
+    height: 50%;
+    width: 50%;
+    background-color: black;
+}
+.eins{
+    grid-column: 0/1;
+}
+.zwei{
+    grid-column: 1/2;
+}
+.drei{
+    grid-column: 2/3;
+}

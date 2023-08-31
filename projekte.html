@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projekte</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.16/dist/tailwind.min.css" rel="stylesheet">
+</head>
+<body class="bg-gray-200 min-h-screen">
+    <header class="bg-gray-800 text-white">
+        <nav class="container mx-auto flex justify-between p-4">
+            <div class="font-semibold text-lg">
+                Andri Heeb
+            </div>
+            <ul class="hidden md:flex space-x-4">
+                <li><a href="index.html" class="hover:underline">Über mich</a></li>
+                <li><a href="projekte.html" class="hover:underline">Projekte</a></li>
+                <li><a href="kontakt.html" class="hover:underline">Kontakt</a></li>
+            </ul>
+            <div class="md:hidden flex items-center">
+                <button class="mobile-menu-button">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+        <ul class="mobile-menu hidden md:hidden flex flex-col space-y-2 p-4">
+            <li><a href="index.html" class="hover:underline">Über mich</a></li>
+            <li><a href="projekte.html" class="hover:underline">Projekte</a></li>
+            <li><a href="kontakt.html" class="hover:underline">Kontakt</a></li>
+        </ul>
+    </header>
+    <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-4 p-4 md:p-8 bg-gray-200 h-full">
+        <!-- Memory Projekt -->
+        <a href="/memory" class="relative h-full bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="video-bg object-cover w-full h-64">
+                <video playsinline autoplay muted loop>
+                    <source src="memory.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="absolute inset-0 bg-gray-800 bg-opacity-50 flex flex-col items-center justify-center text-white p-4">
+                <h1 class="text-2xl text-black">Memory</h1>
+                <p class="text-sm">Das Memory Spiel als Web-App war mehr ein Spassprojekt für einen Lehrer...</p>
+            </div>
+        </a>
+        <!-- Snake Projekt -->
+        <a href="/snake" class="relative h-full bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="video-bg object-cover w-full h-64">
+                <video playsinline autoplay muted loop>
+                    <source src="snake.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="absolute inset-0 bg-gray-800 bg-opacity-50 flex flex-col items-center justify-center text-white p-4">
+                <h1 class="text-2xl text-black">Snake</h1>
+                <p class="text-sm">Das Snake Spiel ebenfalls als Web-App war ein tatsächlicher Arbeitsauftrag eines Lehrers...</p>
+            </div>
+        </a>
+        <!-- Würfelpoker Projekt -->
+        <a href="/wuerfelpoker" class="relative h-full bg-white rounded-lg shadow-lg overflow-hidden">
+            <div class="video-bg object-cover w-full h-64">
+                <video playsinline autoplay muted loop>
+                    <source src="wuerfelpoker.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="absolute inset-0 bg-gray-800 bg-opacity-50 flex flex-col items-center justify-center text-white p-4">
+                <h1 class="text-2xl text-black">Würfelpoker</h1>
+                <p class="text-sm">In diesem Spiel würfelt man hauptsächlich. Wer zuerst insgesamt eine definierte Gewinnpunktzahl erreicht, hat gewonnen...</p>
+            </div>
+        </a>
+    </div>
+    
+    <script>
+        const mobileMenuButton = document.querySelector('.mobile-menu-button');
+        const mobileMenu = document.querySelector('.mobile-menu');
+        
+        mobileMenuButton.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+</body>
+</html>

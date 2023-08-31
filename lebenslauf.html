@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lebenslauf Zeitstrahl</title>
+    <link rel="stylesheet" href="lebenslauf.css">
+    <script src="lebenslauf.js" defer></script>
+</head>
+
+<body>
+    <div class="timeline">
+        <svg width="800" height="1000" class="snake-path">
+            <!-- Die Schlange -->
+            <path id="snake" d="M100 50 C180 -30 250 150 250 250 S180 400 100 500 C20 600 380 650 500 750 S700 850 700 950" stroke="black" fill="none" stroke-width="10"></path>
+        </svg>
+
+        <!-- Die Punkte. -->
+        <!-- Die Punkte. -->
+<div class="point" data-year="2000" style="left: 230px; top: 230px;">
+    <div class="popup">Text für das Jahr 2000.</div>
+</div>
+<div class="point" data-year="2005" style="left: 80px; top: 480px;">
+    <div class="popup" style=" left: 30px">Text für das Jahr 2005.</div>
+</div>
+<div class="point" data-year="2010" style="left: 480px; top: 720px;">
+    <div class="popup">Text für das Jahr 2010.</div>
+</div>
+<div class="point" data-year="2015" style="left: 680px; top: 920px;">
+    <div class="popup">Text für das Jahr 2015.</div>
+</div>
+    </div>
+</body>
+
+</html>
