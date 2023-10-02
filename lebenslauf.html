@@ -1,36 +1,29 @@
 <!DOCTYPE html>
-<html lang="de">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lebenslauf Zeitstrahl</title>
-    <link rel="stylesheet" href="lebenslauf.css">
-    <script src="lebenslauf.js" defer></script>
+  <title>Lebenslauf Schlange</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.7/dist/tailwind.min.css" rel="stylesheet">
+  <script src="script.js" defer></script>
 </head>
-
-<body>
-    <div class="timeline">
-        <svg width="800" height="1000" class="snake-path">
-            <!-- Die Schlange -->
-            <path id="snake" d="M100 50 C180 -30 250 150 250 250 S180 400 100 500 C20 600 380 650 500 750 S700 850 700 950" stroke="black" fill="none" stroke-width="10"></path>
-        </svg>
-
-        <!-- Die Punkte. -->
-        <!-- Die Punkte. -->
-<div class="point" data-year="2000" style="left: 230px; top: 230px;">
-    <div class="popup">Text für das Jahr 2000.</div>
-</div>
-<div class="point" data-year="2005" style="left: 80px; top: 480px;">
-    <div class="popup" style=" left: 30px">Text für das Jahr 2005.</div>
-</div>
-<div class="point" data-year="2010" style="left: 480px; top: 720px;">
-    <div class="popup">Text für das Jahr 2010.</div>
-</div>
-<div class="point" data-year="2015" style="left: 680px; top: 920px;">
-    <div class="popup">Text für das Jahr 2015.</div>
-</div>
+<body class="bg-gray-100">
+  <div id="container" class="relative h-screen w-full overflow-hidden">
+    <canvas id="snakeCanvas" class="absolute top-0 left-0"></canvas>
+    
+    <div class="point absolute top-1/4 left-1/4 text-center hover-trigger" id="point1">
+      <div class="bg-blue-500 rounded-full h-12 w-12 flex items-center justify-center hover-target">
+        <span class="text-white">1</span>
+      </div>
+      <div class="text hidden hover-reveal">Ausbildung</div>
     </div>
+    
+    <div class="point absolute top-1/4 right-1/4 text-center hover-trigger" id="point2">
+      <div class="bg-blue-500 rounded-full h-12 w-12 flex items-center justify-center hover-target">
+        <span class="text-white">2</span>
+      </div>
+      <div class="text hidden hover-reveal">Berufserfahrung</div>
+    </div>
+    
+    <!-- Fügen Sie weitere Punkte hinzu -->
+  </div>
 </body>
-
 </html>
